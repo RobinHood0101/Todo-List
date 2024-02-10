@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Robin">
+    <meta name="title" content="Todo-Liste">
+    <meta name="description" content="Einfache Todo-Liste">
+    <meta name="keywords" content="Todo-Liste, Todo, Aufgaben">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <title>Todo</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="sound1" src="ok-i-pull-up.mp3" preload="auto"></audio>
+    
+    <nav>
+        <img src="logo.svg" alt="Logo" width="100" height="100">
+        <ion-icon id="burgermenu" name="menu-outline"></ion-icon>
+        
+        <ul>
+            <p><div id="beta"><span class="dot"></span></div></p>
+            <li><a href="#">Neuigkeiten</a></li>
+            <li><a href="#">Produkte</a></li>
+            <li><a href="#">Konto</a></li>
+            <li><a href="#">Hilfe</a></li>
+            <li><a href="#">Über Todo</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Todo-Liste<ion-icon name="checkmark-outline"></ion-icon></h1>
+        <p>von <a href="https://github.com/RobinHood0101"><mark>Robin</mark></a></p>
+    </header>
+    <main>
+        <h2>Meine Todo Einträge</h2>
+        <div class="todo">
+            <div class="popup">
+                <ion-icon class="closeIcon" name="close-outline"></ion-icon>
+                <p>Bitte Todo eingeben:</p>
+                <div class="inputArea">
+                    <input type="text" class="inputTodo" maxlength="30" placeholder="Neue Aufgabe">
+                    <input type="date" name="date" id="inputDate">
+                    <button class="confirmButton">Bestätigen</button>
+                    <p class="inputWarning"></p>
+                </div>
+            </div>
+            <ul class="ulTodo">
+            </ul>
+            <div class="control">
+                <button class="addButton">Hinzufügen</button>
+                <button id="deleteAll">Alles Löschen</button> 
+            </div>
+        </div>
+
+        <h3>Todo-Liste exportieren oder importieren</h3>
+        <div class="export_import">
+            <button id="exportButton">Export</button>
+            <input type="file" name="import" id="importInput" style="display: none;">
+            <button id="importButton">Import</button>
+        </div>
+        <p>Achtung! Wenn Sie eine Todo Liste importieren, wird die aktuelle gelöscht!</p>
+    </main>
+    
+    <div id="betaFeatures">
+        <div id="move"><ion-icon class="minimizeIconBeta" name="remove-outline"></ion-icon><ion-icon class="closeIconBeta" name="close-outline"></ion-icon></div>
+        <div id="features">
+            <p id="betaP">Change Color:<input type="color" name="color" id="inputColor"></p>
+            <div class="buttons">
+                <button id="betaButton" onclick="changeColor()">Apply</button>
+                <button onclick="setColorToDefault()">Default</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="follow">
+            <h3>Folge mir</h3>
+                <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            </div>
+            <div class="contact">
+            <h3>Kontaktiere mich</h3>
+                <a href="mailto:email@example.com">Sende mir eine Email</a> 
+                <p>Discord: Robldoblbin</p>
+            </div>
+            <div class="more">
+                <h3>mehr...</h3>
+                <p>Help Center</p>
+                <p>Überblick</p>
+                <p><a href="https://robinsbackgroundgenerator.netlify.app">weitere Tools</a></p>
+            </div>
+        </div>
+        <p>Robin © 2024 | <a href="#">Impressum</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="objekte.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <noscript>Bitte JavaScript aktivieren!</noscript>
+</body>
+</html>
